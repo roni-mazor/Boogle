@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Header from '../components/Header'
+
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +13,24 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+
+      <form className="flex flex-col items-center mt-18 ">
+        <Image style={{ objectFit: 'cover' }} alt="google logo" width="300" height="100" src="https://techcrunch.com/wp-content/uploads/2015/10/screen-shot-2015-10-08-at-4-20-16-pm.png" />
+        <div className="h-10 flex w-full mx-auto border border-gray-200 max-w-2xl  relative rounded-full ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-gray-700 absolute left-4 top-3">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+          <input type="text" className="flex-grow focus-visible:outline-none px-10 h-full rounded-full hover:shadow-lg focus-within:shadow-lg " />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-gray-700 absolute right-4 top-3">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+          </svg>
+        </div>
+        <div className="flex items-center mt-6 gap-3">
+          <button className="search-btn">Google search</button>
+          <button className="search-btn">Im feeling lucky</button>
+        </div>
+
+      </form>
     </div>
   )
 }

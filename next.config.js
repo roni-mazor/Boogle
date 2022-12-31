@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // env: {
-  //   GOOGLE_CLIENT_ID: '64378162242 - sdt3qqesu9rse5kr3cpgms9eqc4vgv3l.apps.googleusercontent.com',
-  //   GOOGLE_CLIENT_SECRET: 'GOCSPX - AeELkpk9YtWXZVAVLfR7EVRuhfxo'
-  // }
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'techcrunch.com',
+        port: '',
+        pathname: '/wp-content/uploads/2015/10/screen-shot-2015-10-08-at-4-20-16-pm.png',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
