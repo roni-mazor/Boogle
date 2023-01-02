@@ -15,7 +15,7 @@ export default function Search({ results }: { results: any }) {
                 <title>{router.query.term}-Search page</title>
             </Head>
             <SearchHeader />
-            <SearchResults searchTime={formattedSearchTime} totalResults={formattedTotalResults} />
+            <SearchResults searchTime={formattedSearchTime} totalResults={formattedTotalResults} items={results.items} />
         </div>
     )
 }
