@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import { getProviders, signIn, ClientSafeProvider } from "next-auth/react"
 import { useRouter } from "next/router";
 
-export default function signInPage({ providers }: { providers: ClientSafeProvider[] }) {
+export default function SignInPage({ providers }: { providers: ClientSafeProvider[] }) {
     const router = useRouter()
     return (
         <>
