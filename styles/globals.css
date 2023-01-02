@@ -4,9 +4,18 @@
 
 @layer components {
   .link {
-    @apply hover:underline cursor-pointer;
+    @apply cursor-pointer hover:underline;
   }
+
   .search-btn {
     @apply hover:ring-1 hover:ring-gray-300 hover:shadow-md bg-slate-100 text-[#3c4043] py-2 px-3 rounded box-border text-sm;
   }
+}
+
+.next-page-positioner {
+  right: -36px;
+}
+
+.prev-page-positioner {
+  left: -60px;
 }

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     e.preventDefault()
     const term = searchInputRef.current.value
     if (!term.trim()) return
-    router.push(`/search?term=${term.trim()}&searchType=`)
+    router.push(`/search?term=${term.trim()}&searchType=&firstResult=1`)
   }
 
   return (
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <Header />
 
       <form className="flex flex-col items-center mt-18 ">
-      <Image style={{ objectFit: 'cover' }} alt="google logo" width="300" height="100" src="https://techcrunch.com/wp-content/uploads/2015/10/screen-shot-2015-10-08-at-4-20-16-pm.png" />
+        <Image style={{ objectFit: 'cover' }} alt="google logo" width="300" height="100" src="https://techcrunch.com/wp-content/uploads/2015/10/screen-shot-2015-10-08-at-4-20-16-pm.png" />
         <div className="h-10 flex w-full mx-auto border border-gray-200 max-w-2xl  relative rounded-full ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-gray-700 absolute left-4 top-3">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
