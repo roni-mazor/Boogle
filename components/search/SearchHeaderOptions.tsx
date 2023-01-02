@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import SearchHeaderOption from "./searchHeaderOption"
+import SearchHeaderOption from "./SearchHeaderOption"
 
 
 
