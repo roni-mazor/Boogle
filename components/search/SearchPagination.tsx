@@ -35,7 +35,7 @@ export default function SearchPagination() {
                 </button>}
                 <p className="">G</p>
                 {pages.map((num, index) => (
-                    <div className={`cursor-pointer ${(firstResult && +firstResult === num) ? 'text-red-700' : 'text-yellow-500'}`} onClick={() => movePage(num)}>
+                    <div key={index} className={`cursor-pointer ${(firstResult && +firstResult === num) ? 'text-red-700' : 'text-yellow-500'}`} onClick={() => movePage(num)}>
                         o
                         <p className="text-center text-sm text-blue-500 font-regular hover:underline">{index + 1}</p>
                     </div>
