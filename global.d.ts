@@ -4,5 +4,6 @@ namespace NodeJS {
         GOOGLE_CLIENT_SECRET: string;
         GOOGLE_API_KEY: string;
         CONTEXT_KEY: string;
+        SECRET: string;
     }
 }
