@@ -4,9 +4,8 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 interface Props {
     className?: string
 }
-export default function UserPreview({ className }:Props) {
+export default function UserPreview({ className }: Props) {
     const { data: session } = useSession()
-    console.log(session)
     if (session) {
         return (
             <>
