@@ -10,14 +10,14 @@ export default function Search({ results }: { results: any }) {
     console.log(results)
     const { formattedSearchTime, formattedTotalResults } = results.searchInformation
     const router = useRouter()
-    
+
     return (
         <div>
             <Head>
                 <title>{router.query.term}-Search page</title>
             </Head>
             <SearchHeader />
-            <SearchResults searchTime={formattedSearchTime} totalResults={formattedTotalResults} items={results.items} />
+            <SearchResults searchTime={formattedSearchTime} totalResults={formattedTotalResults} items={results.items} router={router} />
             <SearchPagination />
         </div>
     )

@@ -19,6 +19,12 @@ const Home: NextPage = () => {
     router.push(`/search?term=${term.trim()}&searchType=&firstResult=1`)
   }
 
+  const searchRandomWord = async (e: FormEvent) => {
+    e.preventDefault()
+    const word = await fetch('https://random-word-api.herokuapp.com/word').then(res => res.json())
+    router.push(`/search?term=${word}&searchType=&firstResult=1`)
+  }
+
   return (
     <div>
       <Head>
@@ -41,7 +47,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex items-center mt-6 gap-3">
           <button onClick={search} type="submit" className="search-btn">Google search</button>
-          <button className="search-btn">Im feeling lucky</button>
+          <button onClick={searchRandomWord} className="search-btn">Im feeling lucky</button>
         </div>
 
       </form>
