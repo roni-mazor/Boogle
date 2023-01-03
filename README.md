@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A Google clone,using google API,you can search,log in search for images,built with NEXT.js13 and tailwind CSS
 
 ## Getting Started
 
